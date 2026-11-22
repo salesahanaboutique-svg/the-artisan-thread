@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Designer onboarding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Great+Vibes&amp;family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{text-decoration:none;color:inherit}
+.hd{font-family:'Cormorant Garamond',Georgia,serif}.sc{font-family:'Great Vibes',cursive}
+.c{background:#fff;border:1.5px solid #E6CFA3;border-radius:20px;padding:22px}
+.p{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.b{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;background:#B24560;color:#fff}
+.r{display:grid;grid-template-columns:90px 1fr 190px 96px;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed #E6CFA3;font-size:14px}
+.f{border:1.5px solid #E6CFA3;border-radius:12px;padding:10px 14px;margin-bottom:10px;color:#8A6A62;font-size:14px;background:#FEFAF6}
+</style>
+</helmet>
+<div style="font-family:'Jost',system-ui,sans-serif;color:#3E2420;background:#FEFAF6;line-height:1.5">
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 5%;border-bottom:1.5px dashed #CAA067">
+<span class="sc" style="font-size:36px;color:#7A3B3F">The Artisan Thread</span>
+<nav style="display:flex;flex-wrap:wrap;gap:20px;font-size:14px;font-weight:500"><a href="#">Overview</a><a href="#"><strong>Onboarding</strong></a><a href="#">Methods</a><a href="#">Orders</a><a href="#">Payouts</a></nav>
+<span class="p" style="background:#3E2420;color:#FCF2E9">Admin</span>
+</header>
+<main style="padding:32px 5% 56px">
+<p class="sc" style="margin:0;font-size:38px;color:#B24560">Designer onboarding</p>
+<h1 class="hd" style="margin:0 0 6px;font-size:44px;line-height:1.05">Onboard your first 10 designers</h1>
+<span class="p" style="background:#F7E8D4;margin-bottom:20px">Sample data for design only</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:start">
+<div class="c" style="background:#FBE4DC">
+<h2 class="hd" style="margin:0 0 12px;font-size:28px">Add a designer</h2>
+<div class="f">Full name</div>
+<div class="f">WhatsApp number</div>
+<div class="f">City</div>
+<div class="f">Garments they draft (blouse, kurta, salwar...)</div>
+<a class="b" href="#">Add and send invite</a>
+<div style="margin-top:20px;padding:18px;border:2px dashed #CAA067;border-radius:14px;text-align:center;font-size:14px;background:#fff"><strong>Add all 10 at once</strong><br>Paste names and numbers, or upload a sheet</div>
+<p style="margin:14px 0 0;font-size:13px">Each designer gets a private ID (TAT-D001 to TAT-D010). Customers only see the ID.</p>
+</div>
+<div class="c">
+<h2 class="hd" style="margin:0 0 4px;font-size:28px">Designer slots</h2>
+<p style="margin:0 0 8px;font-size:13px;color:#6B4A42">Invited, then identity verified, then role check (not a tailor), then standard chart accepted, then method approved.</p>
+<div class="r"><strong>TAT-D001</strong><span>Name pending</span><span class="p" style="background:#E3ECD8">Method approved</span><a class="b" href="#" style="background:#3E2420">View</a></div>
+<div class="r"><strong>TAT-D002</strong><span>Name pending</span><span class="p" style="background:#F7E8D4">Method in review</span><a class="b" href="#">Review</a></div>
+<div class="r"><strong>TAT-D003</strong><span>Name pending</span><span class="p" style="background:#F7E8D4">Chart accepted</span><a class="b" href="#" style="background:#3E2420">View</a></div>
+<div class="r"><strong>TAT-D004</strong><span>Name pending</span><span class="p" style="background:#F8CBD0">Role check failed</span><a class="b" href="#">Resolve</a></div>
+<div class="r"><strong>TAT-D005</strong><span>Name pending</span><span class="p" style="background:#FBE4DC">Identity verified</span><a class="b" href="#" style="background:#3E2420">View</a></div>
+<div class="r"><strong>TAT-D006</strong><span>Name pending</span><span class="p" style="background:#FBE4DC">Invited</span><a class="b" href="#" style="background:#3E2420">Remind</a></div>
+<div class="r"><strong>TAT-D007</strong><span>Name pending</span><span class="p" style="background:#FBE4DC">Invited</span><a class="b" href="#" style="background:#3E2420">Remind</a></div>
+<div class="r"><strong>TAT-D008</strong><span>Name pending</span><span class="p" style="background:#FBE4DC">Invited</span><a class="b" href="#" style="background:#3E2420">Remind</a></div>
+<div class="r"><strong>TAT-D009</strong><span>Name pending</span><span class="p" style="background:#EDE6DA">Not invited</span><a class="b" href="#">Invite</a></div>
+<div class="r" style="border:0"><strong>TAT-D010</strong><span>Name pending</span><span class="p" style="background:#EDE6DA">Not invited</span><a class="b" href="#">Invite</a></div>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

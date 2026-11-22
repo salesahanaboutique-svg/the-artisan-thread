@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Customer home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">`n</head>
+<body>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Great+Vibes&amp;family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{text-decoration:none;color:inherit}
+.hd{font-family:'Cormorant Garamond',Georgia,serif}.sc{font-family:'Great Vibes',cursive}
+.c{background:#fff;border:1.5px solid #E6CFA3;border-radius:20px;padding:22px}
+.p{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.b{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;background:#B24560;color:#fff}
+.r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed #E6CFA3}
+.s{flex:1;min-width:110px;text-align:center;font-size:13px}
+.d{width:18px;height:18px;border-radius:50%;margin:0 auto 6px;background:#CAA067}
+</style>
+
+<div style="font-family:'Jost',system-ui,sans-serif;color:#3E2420;background:#FEFAF6;line-height:1.5">
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 5%;border-bottom:1.5px dashed #CAA067">
+<a href="index.html" class="sc" style="font-size:36px;color:#7A3B3F;text-decoration:none">The Artisan Thread</a>
+<nav style="display:flex;flex-wrap:wrap;gap:20px;font-size:14px;font-weight:500"><a href="index.html">Home</a><a href="#">My measurements</a><a href="#">Designers</a><a href="#">My orders</a></nav>
+<span class="p" style="background:#F8CBD0">Customer</span>
+</header>
+<main style="padding:32px 5% 56px">
+<p class="sc" style="margin:0;font-size:38px;color:#B24560">Welcome back</p>
+<h1 class="hd" style="margin:0 0 6px;font-size:44px;line-height:1.05">Need a garment that fits?</h1>
+<span class="p" style="background:#F7E8D4;margin-bottom:18px">Sample data for design only</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:start;margin-bottom:24px">
+<div class="c" style="background:#FBE4DC">
+<h2 class="hd" style="margin:0 0 8px;font-size:28px">Your measurement profile</h2>
+<div style="height:10px;border-radius:999px;background:#fff;overflow:hidden"><div id="profile-progress-bar" style="width:70%;height:100%;background:#B24560;transition:width 0.4s ease"></div></div>
+<p id="profile-progress-text" style="margin:8px 0 16px;font-size:14px">9 of 13 measurements saved</p>
+<button type="button" class="b" onclick="openMeasurementModal()" style="border:none">Continue measuring</button> <button type="button" class="b" onclick="openHomeVisitModal()" style="background:#3E2420;border:none">Book a home visit</button>
+</div>
+<div class="c">
+<h2 class="hd" style="margin:0 0 14px;font-size:28px">Your order · ORD-1042</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<div class="s"><div class="d"></div>Measured</div>
+<div class="s"><div class="d"></div>Designer chosen</div>
+<div class="s"><div class="d" style="background:#B24560"></div><strong>Pattern drafted</strong></div>
+<div class="s"><div class="d" style="background:#E6CFA3"></div>Stitching</div>
+<div class="s"><div class="d" style="background:#E6CFA3"></div>Delivered</div>
+</div>
+</div>
+</div>
+<h2 class="hd" style="margin:0 0 12px;font-size:30px">Choose a designer</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+<div class="c" style="background:#E3ECD8"><strong class="hd" style="font-size:24px">TAT-D001</strong><br>3-dart blouse<br><span class="p" style="background:#fff">Classic fit</span><br><button type="button" class="b" onclick="selectDesigner('TAT-D001', '3-dart blouse')\" style="margin-top:12px;border:none">Choose</button></div>
+<div class="c" style="background:#F7E8D4"><strong class="hd" style="font-size:24px">TAT-D002</strong><br>Kurtas<br><span class="p" style="background:#fff">Everyday wear</span><br><button type="button" class="b" onclick="selectDesigner('TAT-D001', '3-dart blouse')\" style="margin-top:12px;border:none">Choose</button></div>
+<div class="c" style="background:#F8CBD0"><strong class="hd" style="font-size:24px">Not sure?</strong><br>Tell us your style and budget and we will match you.<br><button type="button" class="b" onclick="selectDesigner('TAT-Auto', 'Curated Match')\" style="margin-top:12px;background:#3E2420;border:none">Match me</button></div>
+</div>
+</main>
+</div>
+
+
+<!-- The Artisan Thread Portal Quick Switcher Bar -->
+<div id="tat-portal-bar" style="position:fixed;bottom:18px;right:18px;z-index:999999;background:#3E2420;color:#FCF2E9;border-radius:999px;box-shadow:0 10px 35px rgba(0,0,0,0.35);padding:8px 16px;display:flex;align-items:center;gap:10px;font-family:'Jost',system-ui,sans-serif;font-size:13px;border:1.5px solid #CAA067;backdrop-filter:blur(10px)">
+  <span style="font-weight:600;color:#E6CFA3;display:flex;align-items:center;gap:7px;">
+    <span style="width:9px;height:9px;border-radius:50%;background:#48bb78;display:inline-block;box-shadow:0 0 8px #48bb78"></span>
+    Portals:
+  </span>
+  <a href='index.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;color:#FCF2E9;'>Landing</a><span style='color:#CAA067;opacity:0.5'>•</span><a href='Customer.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;background:#B24560;color:#fff;font-weight:700;'>Customer</a><span style='color:#CAA067;opacity:0.5'>•</span><a href='Designer.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;color:#FCF2E9;'>Designer</a><span style='color:#CAA067;opacity:0.5'>•</span><a href='Tailor.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;color:#FCF2E9;'>Tailor</a><span style='color:#CAA067;opacity:0.5'>•</span><a href='Admin.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;color:#FCF2E9;'>Admin</a><span style='color:#CAA067;opacity:0.5'>•</span><a href='Onboarding.html' style='text-decoration:none;padding:5px 12px;border-radius:999px;font-size:13px;transition:all 0.2s;color:#FCF2E9;'>Onboarding</a>
+</div>
+<!-- Customer Measurement Modal -->
+<div id="measurement-modal" class="tat-modal-overlay">
+  <div class="tat-modal">
+    <button class="tat-modal-close" onclick="closeModal('measurement-modal')">&times;</button>
+    <p class="sc" style="font-size:34px;color:#B24560;margin:0">Measurement Profile</p>
+    <h2 class="hd" style="font-size:30px;margin:0 0 12px">Your 13 Tailoring Dimensions</h2>
+    <p style="font-size:14px;color:#6B4A42;margin:0 0 20px">Measurements are saved permanently so any designer can draft exact patterns without re-measuring.</p>
+    <form onsubmit="saveMeasurementProfile(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Shoulder (in)</label><input type="text" class="f" value="14.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Upper Chest (in)</label><input type="text" class="f" value="36.0" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Middle Chest (in)</label><input type="text" class="f" value="37.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Waist (in)</label><input type="text" class="f" value="29.0" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Armhole (in)</label><input type="text" class="f" value="16.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Front Length (in)</label><input type="text" class="f" value="14.0" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Dart Apex (in)</label><input type="text" class="f" value="9.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Front Neck (in)</label><input type="text" class="f" value="6.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Back Neck (in)</label><input type="text" class="f" value="7.5" style="width:100%;box-sizing:border-box"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Sleeve Length (in)</label><input type="text" class="f" placeholder="e.g. 10.5" value="10.5" style="width:100%;box-sizing:border-box;border-color:#B24560"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Bicep (in)</label><input type="text" class="f" placeholder="e.g. 12.0" value="12.0" style="width:100%;box-sizing:border-box;border-color:#B24560"></div>
+        <div><label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Wrist (in)</label><input type="text" class="f" placeholder="e.g. 6.5" value="6.5" style="width:100%;box-sizing:border-box;border-color:#B24560"></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:12px">
+        <button type="button" class="b" onclick="closeModal('measurement-modal')" style="background:#EDE6DA;color:#3E2420;border:none">Cancel</button>
+        <button type="submit" class="b" style="border:none">Save Profile</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Home Visit Booking Modal -->
+<div id="home-visit-modal" class="tat-modal-overlay">
+  <div class="tat-modal" style="max-width:480px">
+    <button class="tat-modal-close" onclick="closeModal('home-visit-modal')">&times;</button>
+    <p class="sc" style="font-size:34px;color:#B24560;margin:0">Doorstep Tailoring</p>
+    <h2 class="hd" style="font-size:30px;margin:0 0 12px">Book a Home Visit</h2>
+    <p style="font-size:14px;color:#6B4A42;margin:0 0 20px">We visit your home in Chennai, take professional measurements, and collect your fabric.</p>
+    <form onsubmit="submitHomeVisit(event)">
+      <label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Your Name</label>
+      <input type="text" id="hv-name" class="f" placeholder="Full Name" required style="width:100%;box-sizing:border-box">
+      <label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Address / Area</label>
+      <input type="text" id="hv-address" class="f" placeholder="e.g. Anna Nagar, Chennai" required style="width:100%;box-sizing:border-box">
+      <label style="font-size:12px;font-weight:600;display:block;margin-bottom:4px">Preferred Date</label>
+      <input type="date" id="hv-date" class="f" required style="width:100%;box-sizing:border-box">
+      <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:16px">
+        <button type="button" class="b" onclick="closeModal('home-visit-modal')" style="background:#EDE6DA;color:#3E2420;border:none">Cancel</button>
+        <button type="submit" class="b" style="border:none">Confirm Booking</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src='app.js'></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Designer home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Great+Vibes&amp;family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{text-decoration:none;color:inherit}
+.hd{font-family:'Cormorant Garamond',Georgia,serif}.sc{font-family:'Great Vibes',cursive}
+.c{background:#fff;border:1.5px solid #E6CFA3;border-radius:20px;padding:22px}
+.p{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.b{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;background:#B24560;color:#fff}
+.r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed #E6CFA3}
+</style>
+</helmet>
+<div style="font-family:'Jost',system-ui,sans-serif;color:#3E2420;background:#FEFAF6;line-height:1.5">
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 5%;border-bottom:1.5px dashed #CAA067">
+<span class="sc" style="font-size:36px;color:#7A3B3F">The Artisan Thread</span>
+<nav style="display:flex;flex-wrap:wrap;gap:20px;font-size:14px;font-weight:500"><a href="#">Home</a><a href="#">Orders to draft</a><a href="#">My methods</a><a href="#">Required measurements</a><a href="#">Earnings</a></nav>
+<span class="p" style="background:#E3ECD8">Designer · TAT-D001</span>
+</header>
+<main style="padding:32px 5% 56px">
+<p class="sc" style="margin:0;font-size:38px;color:#B24560">Welcome back</p>
+<h1 class="hd" style="margin:0 0 6px;font-size:44px;line-height:1.05">Designer home</h1>
+<span class="p" style="background:#F7E8D4;margin-bottom:18px">Sample data for design only</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px">
+<div class="c" style="background:#FBE4DC"><div class="hd" style="font-size:44px;font-weight:700;line-height:1">3</div>Orders to draft</div>
+<div class="c" style="background:#E3ECD8"><div class="hd" style="font-size:44px;font-weight:700;line-height:1">2</div>Methods live</div>
+<div class="c" style="background:#F7E8D4"><div class="hd" style="font-size:44px;font-weight:700;line-height:1">1</div>Method in review</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:start">
+<div class="c">
+<h2 class="hd" style="margin:0 0 4px;font-size:28px">Orders to draft</h2>
+<div class="r"><div><strong>ORD-1042 · 3-dart blouse</strong><br><span class="p" style="background:#E3ECD8">Measurements complete</span></div><a class="b" href="#">Open draft</a></div>
+<div class="r"><div><strong>ORD-1045 · Kurta</strong><br><span class="p" style="background:#F8CBD0">2 measurements missing</span></div><a class="b" href="#" style="background:#3E2420">Request</a></div>
+<div class="r" style="border:0"><div><strong>ORD-1047 · 3-dart blouse</strong><br><span class="p" style="background:#E3ECD8">Measurements complete</span></div><a class="b" href="#">Open draft</a></div>
+</div>
+<div>
+<div class="c" style="margin-bottom:24px">
+<h2 class="hd" style="margin:0 0 4px;font-size:28px">My methods</h2>
+<div class="r"><span>3-dart blouse</span><span class="p" style="background:#E3ECD8">Live</span></div>
+<div class="r"><span>Kurta · step 6 of 12</span><span class="p" style="background:#FBE4DC">Draft</span></div>
+<div class="r" style="border:0"><span>Salwar</span><a class="b" href="#" style="background:#3E2420">+ Add method</a></div>
+</div>
+<div class="c" style="background:#F7E8D4;border-style:dashed">
+<strong>Your craft, our stitching.</strong> You check measurements and draft the pattern. Our hub tailors do the stitching.
+</div>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

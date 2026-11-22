@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Customer home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Great+Vibes&amp;family=Jost:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{text-decoration:none;color:inherit}
+.hd{font-family:'Cormorant Garamond',Georgia,serif}.sc{font-family:'Great Vibes',cursive}
+.c{background:#fff;border:1.5px solid #E6CFA3;border-radius:20px;padding:22px}
+.p{display:inline-block;padding:3px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.b{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;background:#B24560;color:#fff}
+.r{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed #E6CFA3}
+.s{flex:1;min-width:110px;text-align:center;font-size:13px}
+.d{width:18px;height:18px;border-radius:50%;margin:0 auto 6px;background:#CAA067}
+</style>
+</helmet>
+<div style="font-family:'Jost',system-ui,sans-serif;color:#3E2420;background:#FEFAF6;line-height:1.5">
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:14px 5%;border-bottom:1.5px dashed #CAA067">
+<span class="sc" style="font-size:36px;color:#7A3B3F">The Artisan Thread</span>
+<nav style="display:flex;flex-wrap:wrap;gap:20px;font-size:14px;font-weight:500"><a href="#">Home</a><a href="#">My measurements</a><a href="#">Designers</a><a href="#">My orders</a></nav>
+<span class="p" style="background:#F8CBD0">Customer</span>
+</header>
+<main style="padding:32px 5% 56px">
+<p class="sc" style="margin:0;font-size:38px;color:#B24560">Welcome back</p>
+<h1 class="hd" style="margin:0 0 6px;font-size:44px;line-height:1.05">Need a garment that fits?</h1>
+<span class="p" style="background:#F7E8D4;margin-bottom:18px">Sample data for design only</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:start;margin-bottom:24px">
+<div class="c" style="background:#FBE4DC">
+<h2 class="hd" style="margin:0 0 8px;font-size:28px">Your measurement profile</h2>
+<div style="height:10px;border-radius:999px;background:#fff;overflow:hidden"><div style="width:70%;height:100%;background:#B24560"></div></div>
+<p style="margin:8px 0 16px;font-size:14px">9 of 13 measurements saved</p>
+<a class="b" href="#">Continue measuring</a> <a class="b" href="#" style="background:#3E2420">Book a home visit</a>
+</div>
+<div class="c">
+<h2 class="hd" style="margin:0 0 14px;font-size:28px">Your order · ORD-1042</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<div class="s"><div class="d"></div>Measured</div>
+<div class="s"><div class="d"></div>Designer chosen</div>
+<div class="s"><div class="d" style="background:#B24560"></div><strong>Pattern drafted</strong></div>
+<div class="s"><div class="d" style="background:#E6CFA3"></div>Stitching</div>
+<div class="s"><div class="d" style="background:#E6CFA3"></div>Delivered</div>
+</div>
+</div>
+</div>
+<h2 class="hd" style="margin:0 0 12px;font-size:30px">Choose a designer</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+<div class="c" style="background:#E3ECD8"><strong class="hd" style="font-size:24px">TAT-D001</strong><br>3-dart blouse<br><span class="p" style="background:#fff">Classic fit</span><br><a class="b" href="#" style="margin-top:12px">Choose</a></div>
+<div class="c" style="background:#F7E8D4"><strong class="hd" style="font-size:24px">TAT-D002</strong><br>Kurtas<br><span class="p" style="background:#fff">Everyday wear</span><br><a class="b" href="#" style="margin-top:12px">Choose</a></div>
+<div class="c" style="background:#F8CBD0"><strong class="hd" style="font-size:24px">Not sure?</strong><br>Tell us your style and budget and we will match you.<br><a class="b" href="#" style="margin-top:12px;background:#3E2420">Match me</a></div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
